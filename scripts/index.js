@@ -1,8 +1,9 @@
 'use strict';
 
+import { videoPlayerInit } from "./videoPlayer.js";
 import { radioPlayerInit } from "./radioPlayer.js";
 import { musicPlayerInit } from "./musicPlayer.js";
-import { videoPlayerInit } from "./videoPlayer.js";
+
 
 // variables
 const playerBtn = document.querySelectorAll('.player-btn');
@@ -26,6 +27,6 @@ playerBtn.forEach((btn, i) => {
 })
 
 // function call
+videoPlayerInit();
 radioPlayerInit();
 musicPlayerInit();
-videoPlayerInit();

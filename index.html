@@ -21,7 +21,7 @@
 	<meta name="msapplication-TileColor" content="#ffffff">
 	<meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
 	<meta name="theme-color" content="#ffffff">
-	<title>Tunes</title>
+	<title>js-Tunes</title>
 	<script src="scripts/index.js" type="module"></script>
 	<link rel="stylesheet" href="styles/normalize.css">
 	<link rel="stylesheet" href="styles/font-awesome.min.css">
@@ -53,7 +53,9 @@
 						<button class="video-button video-button__play fa fa-play"></button>
 						<button class="video-button video-button__stop fa fa-stop"></button>
 						<p class="video-time video-time__passed">00:00</p>
-						<input type="range" class="video-progress" min="0" max="100" step="0.1" value="0">
+						<label>
+							<input type="range" class="video-progress" min="0" max="100" step="0.1" value="0">
+						</label>
 						<p class="video-time video-time__total">00:00</p>
 					</nav>
 				</div>
@@ -71,7 +73,7 @@
 			</div>
 			<footer class="footer-fix audio-footer">
 				<nav class="audio-navigation">
-					<div class="audio-btns">
+					<div class="audio-buttons">
 						<button class="audio-button audio-button__prev fa fa-step-backward"></button>
 						<button class="audio-button audio-button__play fa fa-play"></button>
 						<button class="audio-button audio-button__next fa fa-step-forward"></button>
@@ -98,10 +100,10 @@
 						<ul class="radio-list">
 							<li class="radio-item">
 								<label>
-									<div class="radio-check">
+									<span class="radio-check">
 										<img class="radio-img" src="radio/RTLGroove.png" alt="обложка">
-									</div>
-									<input class="radio-btn" type="radio" id="RTLGroove" name="radioStantion"
+									</span>
+									<input class="radio-btn" type="radio" id="RTLGroove" name="radioStation"
 											data-radio-stantion="http://shoutcast.rtl.it:3040/">
 									<span class="radio-name">RTL Groove</span>
 								</label>
@@ -109,10 +111,10 @@
 
 							<li class="radio-item">
 								<label>
-									<div class="radio-check">
+									<span class="radio-check">
 										<img class="radio-img" src="radio/Energy.png" alt="обложка">
-									</div>
-									<input class="radio-btn" type="radio" id="energy" name="radioStantion"
+									</span>
+									<input class="radio-btn" type="radio" id="energy" name="radioStation"
 											data-radio-stantion="http://ic4.101.ru:8000/region_energy_161">
 									<span class="radio-name">Energy</span>
 								</label>
@@ -120,10 +122,10 @@
 
 							<li class="radio-item">
 								<label>
-									<div class="radio-check">
+									<span class="radio-check">
 										<img class="radio-img" src="radio/Record.jpg" alt="обложка">
-									</div>
-									<input class="radio-btn" type="radio" id="recordRus" name="radioStantion"
+									</span>
+									<input class="radio-btn" type="radio" id="recordRus" name="radioStation"
 											data-radio-stantion="http://air.radiorecord.ru:8102/rus_320">
 									<span class="radio-name">Record Rus</span>
 								</label>
@@ -131,10 +133,10 @@
 
 							<li class="radio-item">
 								<label>
-									<div class="radio-check">
+									<span class="radio-check">
 										<img class="radio-img" src="radio/slowRadio.jpg" alt="обложка">
-									</div>
-									<input class="radio-btn" type="radio" id="slowRadio" name="radioStantion"
+									</span>
+									<input class="radio-btn" type="radio" id="slowRadio" name="radioStation"
 											data-radio-stantion="http://air.radiorecord.ru:8102/mdl_320">
 									<span class="radio-name">Медляк FM</span>
 								</label>
@@ -142,10 +144,10 @@
 
 							<li class="radio-item">
 								<label>
-									<div class="radio-check">
+									<span class="radio-check">
 										<img class="radio-img" src="radio/dorojnoe.png" alt="обложка">
-									</div>
-									<input class="radio-btn" type="radio" id="roadRadio" name="radioStantion"
+									</span>
+									<input class="radio-btn" type="radio" id="roadRadio" name="radioStation"
 											data-radio-stantion="http://dorognoe.hostingradio.ru:8000/dorognoe">
 									<span class="radio-name">Дорожное Радио</span>
 								</label>
@@ -153,10 +155,10 @@
 
 							<li class="radio-item">
 								<label>
-									<div class="radio-check">
+									<span class="radio-check">
 										<img class="radio-img" src="radio/90.jpg" alt="обложка">
-									</div>
-									<input class="radio-btn" type="radio" id="90years" name="radioStantion"
+									</span>
+									<input class="radio-btn" type="radio" id="90years" name="radioStation"
 											data-radio-stantion="http://online.radiorecord.ru:8102/sd90_320">
 									<span class="radio-name">90-e</span>
 								</label>

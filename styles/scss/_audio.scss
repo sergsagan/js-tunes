@@ -58,7 +58,6 @@
 
   &.play .audio-img {
     animation-play-state: running // play
-
   }
 
 
@@ -81,7 +80,7 @@
     &__timing {
       background-color: #F51E38;
       border-radius: 3px;
-      width: 0%;
+      width: 0;
       height: 100%;
       transition: width 0.1s linear;
     }
@@ -103,7 +102,7 @@
     outline: 0;
   }
 
-  &-btns {
+  &-buttons {
     display: flex;
     width: 180px;
     justify-content: space-around;

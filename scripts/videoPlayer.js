@@ -1,3 +1,5 @@
+import { addZero } from "./service.js";
+
 export const videoPlayerInit = () => {
     const videoPlayer = document.querySelector('.video-player');
     const videoButtonPlay = document.querySelector('.video-button__play');
@@ -32,8 +34,6 @@ export const videoPlayerInit = () => {
         videoPlayer.currentTime = 0;
     };
 
-    const addZero = n => n < 10 ? '0'+ n : n;
-
     // event handler
     videoPlayer.addEventListener('click', togglePlay);
     videoButtonPlay.addEventListener('click', togglePlay);
@@ -49,14 +49,14 @@ export const videoPlayerInit = () => {
 
         videoProgress.value = (currentTime / duration) * 100;
 
-        let minutePassed =Math.floor(currentTime / 60);
+        let minutesPassed =Math.floor(currentTime / 60);
         let secondsPassed = Math.floor(currentTime % 60);
 
-        let minuteTotal =Math.floor(duration / 60);
+        let minutesTotal =Math.floor(duration / 60);
         let secondsTotal = Math.floor(duration % 60);
 
-        videoTimePassed.textContent = `${addZero(minutePassed)}:${addZero(secondsPassed)}`;
-        videoTimeTotal.textContent = `${addZero(minuteTotal)}:${addZero(secondsTotal)}`;
+        videoTimePassed.textContent = `${addZero(minutesPassed)}:${addZero(secondsPassed)}`;
+        videoTimeTotal.textContent = `${addZero(minutesTotal)}:${addZero(secondsTotal)}`;
     });
 
     videoProgress.addEventListener('input', () => {

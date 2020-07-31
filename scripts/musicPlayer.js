@@ -102,5 +102,14 @@ export const musicPlayerInit = () => {
         const allWidth = audioProgress.clientWidth;
 
         audioPlayer.currentTime = (x / allWidth) * audioPlayer.duration;
-    })
+    });
+
+    musicPlayerInit.stop = () => {
+        if (!audioPlayer.paused) {
+            audioPlayer.pause();
+            audio.classList.remove('play');
+            audioButtonPlay.classList.remove('fa-pause');
+            audioButtonPlay.classList.add('fa-play');
+        }
+    }
 }
